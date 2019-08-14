@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sample</title>
+
+	<link href="/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="/node_modules/smartwizard/dist/css/smart_wizard.css" rel="stylesheet" type="text/css" />
+	<link href="/node_modules/smartwizard/dist/css/smart_wizard_theme_arrows.css" rel="stylesheet" type="text/css" />
+
+
+	<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="/node_modules/smartwizard/dist/js/jquery.smartWizard.min.js"></script>
+
+
+
+</head>
+<body>
+
+
+<h1>Enter Address</h1>
+
+
+<div id="smartwizard" class="sw-main sw-theme-arrows">
+    <ul>
+        <li><a href="#step-1">Step Title<br /><small>Step description</small></a></li>
+        <li><a href="#step-2">Step Title<br /><small>Step description</small></a></li>
+        <li><a href="#step-3">Step Title<br /><small>Step description</small></a></li>
+        <li><a href="#step-4">Step Title<br /><small>Step description</small></a></li>
+    </ul>
+
+    <div>
+        <div id="step-2" class="">
+            Enter Address
+
+            <h2>Street</h2>
+            <input type="text" name="stree">
+
+            <h2>ZipCode</h2>
+            <input type="text" name="ZipCode">
+
+            <button id="btnFirstStep">Next</button>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+    $('#smartwizard').smartWizard({
+                    selected: 1,
+                    theme: 'arrows',
+                    transitionEffect:'fade',
+                    toolbarSettings: {
+                    	toolbarPosition: 'none'
+                    }
+                 });
+
+    $('#btnFirstStep').click(function(){
+    	// TODO validate input
+
+    	$('#smartwizard').smartWizard("next");
+    });
+});
+</script>
+
+</body>
+</html>

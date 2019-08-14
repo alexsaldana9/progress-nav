@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sample</title>
+
+	<link href="/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="/node_modules/smartwizard/dist/css/smart_wizard.css" rel="stylesheet" type="text/css" />
+	<link href="/node_modules/smartwizard/dist/css/smart_wizard_theme_arrows.css" rel="stylesheet" type="text/css" />
+
+
+	<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="/node_modules/smartwizard/dist/js/jquery.smartWizard.min.js"></script>
+
+
+
+</head>
+<body>
+
+
+<h1>Application form</h1>
+
+
+<div id="smartwizard" class="sw-main sw-theme-arrows">
+    <ul>
+        <li><a href="#step-1">Step Title<br /><small>Step description</small></a></li>
+        <li><a href="#step-2">Step Title<br /><small>Step description</small></a></li>
+        <li><a href="#step-3">Step Title<br /><small>Step description</small></a></li>
+        <li><a href="#step-4">Step Title<br /><small>Step description</small></a></li>
+    </ul>
+
+    <div>
+        <div id="step-1" class="">
+            Step Content 1
+
+            <h2>Firstname</h2>
+            <input type="text" name="firstname">
+
+            <h2>Lastname</h2>
+            <input type="text" name="lastname">
+
+            <button id="btnFirstStep">Next</button>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+    $('#smartwizard').smartWizard({
+                    selected: 0,
+                    theme: 'arrows',
+                    transitionEffect:'fade',
+                    toolbarSettings: {
+                    	toolbarPosition: 'none'
+                    }
+                 });
+
+    $('#btnFirstStep').click(function(){
+    	window.location.href = '/address.html'
+    });
+});
+</script>
+
+</body>
+</html>
