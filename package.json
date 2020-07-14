@@ -1,0 +1,15 @@
+{
+  "name": "progress-nav-sample",
+  "version": "1.0.0",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "start": "http-server"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "http-server": "^0.12.3",
+    "jquery": "^3.4.1",
+    "smartwizard": "^5.1.1"
+  }
+}
